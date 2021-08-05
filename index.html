@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Tone Tester</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Play a test tone!</h1>
+    <div>
+      <button data-key="40" class="button-40">40hz</button>
+      <button data-key="60" class="button-60">60hz</button>
+      <button data-key="80" class="button-80">80z</button>
+      <button data-key="100" class="button-100">100hz</button>
+      <button data-key="sweep" class="button-sweep">Sweep</button>
+    </div>
+    <button class="stop">Stop</button>
+    <div>
+      <p class="active-freq"></p>
+    </div>
+  </body>
+
+  <audio class="tone-40" src="sounds/pulse-40.mp3" loop></audio>
+  <audio class="tone-60" src="sounds/pulse-60.mp3" loop></audio>
+  <audio class="tone-80" src="sounds/pulse-80.mp3" loop></audio>
+  <audio class="tone-100" src="sounds/pulse-100.mp3" loop></audio>
+  <audio class="tone-sweep" src="sounds/sweep.mp3"></audio>
+
+  <script src="app.js"></script>
+</html>
