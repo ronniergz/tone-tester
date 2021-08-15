@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <h1>Play a test tone!</h1>
+    <h1>Tone Tester</h1>
     <div>
       <button data-key="play" class="button-play">Play</button>
       <button class="stop">Stop</button>
@@ -16,7 +16,15 @@
     </div>
     <div class="input">
       <input name="freq" type="text" class="freq" />Hz
-      <p class="active-freq"></p>
+      <div class="slide-container">
+        <input
+          type="range"
+          min="20"
+          max="20000"
+          class="slider"
+          id="freq-slider"
+        />
+      </div>
     </div>
   </body>
 
