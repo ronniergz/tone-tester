@@ -2,8 +2,13 @@ body {
   text-align: center;
 }
 
+.input {
+  margin: 2rem;
+}
+
 .freq {
   text-align: right;
+  width: 3rem;
 }
 
 .active-freq {
