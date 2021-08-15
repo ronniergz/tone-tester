@@ -10,23 +10,15 @@
   <body>
     <h1>Play a test tone!</h1>
     <div>
-      <button data-key="40" class="button-40">40hz</button>
-      <button data-key="60" class="button-60">60hz</button>
-      <button data-key="80" class="button-80">80z</button>
-      <button data-key="100" class="button-100">100hz</button>
-      <button data-key="sweep" class="button-sweep">Sweep</button>
+      <button data-key="play" class="button-play">Play</button>
+      <button data-key="pulse" class="button-pulse">Pulse</button>
+      <button class="stop">Stop</button>
     </div>
-    <button class="stop">Stop</button>
     <div>
+      <input name="freq" type="text" class="freq" />Hz
       <p class="active-freq"></p>
     </div>
   </body>
-
-  <audio class="tone-40" src="sounds/pulse-40.mp3" loop></audio>
-  <audio class="tone-60" src="sounds/pulse-60.mp3" loop></audio>
-  <audio class="tone-80" src="sounds/pulse-80.mp3" loop></audio>
-  <audio class="tone-100" src="sounds/pulse-100.mp3" loop></audio>
-  <audio class="tone-sweep" src="sounds/sweep.mp3"></audio>
 
   <script src="app.js"></script>
 </html>

@@ -1,3 +1,11 @@
+body {
+  text-align: center;
+}
+
+.freq {
+  text-align: right;
+}
+
 .active-freq {
   font-size: 4rem;
   font-weight: bold;
