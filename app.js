@@ -9,7 +9,7 @@ const light = document.querySelector("#light");
 // Play frequency
 const play = () => {
   if (playing === true) return;
-  light.style.backgroundColor = "green";
+  light.classList.add("light-on");
   osc = audioContext.createOscillator();
   gain = audioContext.createGain();
   osc.type = "sine";
@@ -31,7 +31,7 @@ const stop = (e) => {
     0.00001,
     audioContext.currentTime + 0.04
   );
-  light.style.backgroundColor = "inherit";
+  light.classList.remove("light-on");
   playing = false;
 };
 

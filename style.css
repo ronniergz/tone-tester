@@ -14,15 +14,20 @@ body {
 .button {
   height: 3rem;
   width: 5rem;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 #light {
   height: 1.5rem;
   width: 1.5rem;
   margin: 1rem auto;
-  border-radius: 0.75rem;
-  border-width: 2px;
-  border-color: gray;
+  border: 2px solid gray;
+  border-radius: 1rem;
+}
+
+.light-on {
+  background-color: #04aa6d;
 }
 
 .slider {
