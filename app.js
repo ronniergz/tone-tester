@@ -1,13 +1,15 @@
 const buttonPlay = document.querySelector(".button-play");
 const buttonPulse = document.querySelector(".button-pulse");
-const buttonStop = document.querySelector(".stop");
+const buttonStop = document.querySelector(".button-stop");
 const freq = document.querySelector(".freq");
 const freqSlider = document.querySelector("#freq-slider");
 const activeFreq = document.querySelector(".active-freq");
+const light = document.querySelector("#light");
 
 // Play frequency
 const play = () => {
   if (playing === true) return;
+  light.style.backgroundColor = "green";
   osc = audioContext.createOscillator();
   gain = audioContext.createGain();
   osc.type = "sine";
@@ -29,6 +31,7 @@ const stop = (e) => {
     0.00001,
     audioContext.currentTime + 0.04
   );
+  light.style.backgroundColor = "inherit";
   playing = false;
 };
 
