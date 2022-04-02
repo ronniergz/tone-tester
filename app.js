@@ -1,3 +1,4 @@
+const body = document.querySelector("body");
 const buttonPlay = document.querySelector(".button-play");
 const buttonPulse = document.querySelector(".button-pulse");
 const buttonStop = document.querySelector(".button-stop");
@@ -5,9 +6,12 @@ const freq = document.querySelector(".freq");
 const freqSlider = document.querySelector("#freq-slider");
 const activeFreq = document.querySelector(".active-freq");
 const light = document.querySelector("#light");
+const test = document.querySelector(".test");
 
 // Play frequency
-const play = () => {
+const play = (e) => {
+  console.log(e.type);
+  e.preventDefault();
   if (playing === true) return;
   light.classList.add("light-on");
   osc = audioContext.createOscillator();
@@ -21,10 +25,12 @@ const play = () => {
   return osc;
 };
 
-// Play frequency on mouse or keydown only
-const pulse = () => play();
+const out = (e) => {
+  console.log(e.type);
+};
 
 const stop = (e) => {
+  console.log(e.type);
   e.preventDefault();
   if (gain === null) return;
   gain.gain.exponentialRampToValueAtTime(
@@ -50,7 +56,7 @@ freq.value = freqSlider.value = 300; // start application at 300Hz
 
 // Listen for Button Clicks
 buttonPlay.addEventListener("click", play);
-buttonPulse.addEventListener("pointerdown", pulse);
-buttonPulse.addEventListener("pointerup", stop);
 buttonStop.addEventListener("click", stop);
+buttonPulse.addEventListener("pointerdown", play);
+buttonPulse.addEventListener("pointerout", stop);
 freqSlider.addEventListener("input", updateFreq);
