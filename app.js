@@ -47,9 +47,7 @@ freq.value = freqSlider.value = 300; // start application at 300Hz
 
 // Listen for Button Clicks
 buttonPlay.addEventListener("click", play);
-buttonPulse.addEventListener("mousedown", pulse);
-buttonPulse.addEventListener("mouseup", stop);
-buttonPulse.addEventListener("touchstart", pulse);
-buttonPulse.addEventListener("touchend", stop);
+buttonPulse.addEventListener("pointerdown", pulse);
+buttonPulse.addEventListener("pointerup", stop);
 buttonStop.addEventListener("click", stop);
 freqSlider.addEventListener("input", updateFreq);
